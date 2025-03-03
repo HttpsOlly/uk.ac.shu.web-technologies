@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
 function toggleBurgerIcon() {
     let menu = document.getElementById("navigation-bar");
+    let icon = document.querySelector(".burger-icon");
+    
     menu.classList.contains("show") ? menu.classList.remove("show") : menu.classList.add("show");
+    icon.classList.contains("open") ? icon.classList.remove("open") : icon.classList.add("open");
 }

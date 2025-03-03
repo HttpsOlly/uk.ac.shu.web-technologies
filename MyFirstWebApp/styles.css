@@ -83,3 +83,13 @@ body {
     max-width: 100%;
     margin-bottom: 1%;
 }
+
+.burger-icon.open::after {
+    content: "\2715";
+    font-size: 100%;
+    color: white;
+}
+
+.burger-icon.open span {
+    display: none;
+}
