@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+    background-color: #333;
+    color: white;
+}
+
+.nav-header h1, .nav-header #flag {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.nav-header #flag {
+    margin-left: 10px;
+}
+
+.burger-icon {
+    font-size: 300%;
+    cursor: pointer;
+}
+
+.nav {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #444;
+    padding: 2%;
+    right: 0;
+    width: 18%;
+    font-size: 25px;
+}
+
+.nav a {
+    color: #fff;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.show {
+    display: flex;
+}
+
+#main-content {
+    width: 96%;
+    padding: 2% 2% 0% 2%;
+}
+
+.left-article {
+    width: 100%;
+}
+
+.right-article {
+    width: 100%;
+    float: right;
+}
+
+.article {
+    display: flex;
+    margin-bottom: 0.5%;
+}
+
+.text-container {
+    width: 50%;
+    padding: 1%;
+}
+
+.photo-container {
+    width: 50%;
+    padding: 1%;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.photo-container img {
+    max-width: 100%;
+    margin-bottom: 1%;
+}
