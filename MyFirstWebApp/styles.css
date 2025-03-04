@@ -54,11 +54,11 @@ body {
 }
 
 .left-article {
-    width: 100%;
+    width: 98%;
 }
 
 .right-article {
-    width: 100%;
+    width: 98%;
     float: right;
 }
 
@@ -92,4 +92,21 @@ body {
 
 .burger-icon.open span {
     display: none;
+}
+
+.photo-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-holder {
+    flex: 1 1 calc(50% - 1%);
+    box-sizing: border-box;
+}
+
+.img-holder img {
+    width: 70%;
+    display: block;
+    margin: auto;
+    justify-content: center;
 }
