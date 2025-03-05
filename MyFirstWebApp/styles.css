@@ -110,3 +110,12 @@ body {
     margin: auto;
     justify-content: center;
 }
+
+li {
+    list-style-type: circle;
+    line-height: 2;
+}
+
+a {
+    color: #00aab2
+}
