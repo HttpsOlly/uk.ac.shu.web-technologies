@@ -10,6 +10,7 @@ body {
     padding: 1% 2%;
     background-color: #333;
     color: white;
+    height: 80px;
 }
 
 .nav-header h1, .nav-header #flag {
@@ -117,5 +118,5 @@ li {
 }
 
 a {
-    color: #00aab2
+    color: #008188
 }
