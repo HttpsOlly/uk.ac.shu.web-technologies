@@ -1,3 +1,42 @@
+@media only screen and (max-width: 600px) {
+    .nav-header .burger-icon {
+      flex-direction: column;
+    }
+
+    .nav-header {
+        font-size: 12px;
+    }
+
+    .burger-icon {
+        font-size: 100%;
+    }
+
+    .reference {
+        width: 86%;
+    }
+
+    #navigation-bar {
+        width: 50%;
+    }
+
+    #flag {
+        width: 14%;
+    }
+
+    .img-holder {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    .img-holder img {
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -101,7 +140,7 @@ body {
 }
 
 .img-holder {
-    flex: 1 1 calc(50% - 1%);
+    display: flex;
     box-sizing: border-box;
 }
 
