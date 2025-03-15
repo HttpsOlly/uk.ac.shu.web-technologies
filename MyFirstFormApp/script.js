@@ -19,10 +19,6 @@ function toggleBurgerIcon() {
 function validateForm() {
     const submitButton = document.querySelector("button");
     
-    const name = document.getElementById("name");
-    const date = document.getElementById("date");
-    const email = document.getElementById("email");
-    
     submitButton.style = "";
     
     document.getElementById("name-validation").textContent = "";
