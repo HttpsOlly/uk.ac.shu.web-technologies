@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (container) {
         var divs = container.children;
         for (var i = 0; i < 3 && i < divs.length; i++) {
-            divs[i].classList.add(i % 2 === 0 ? 'left-article' : 'right-article');
+            divs[i].classList.add(i % 2 === 0 ? "left-article" : "right-article");
         }
     }
 });
@@ -29,24 +29,24 @@ function validateForm() {
     document.getElementById("dateValidation").textContent = "";
     document.getElementById("emailValidation").textContent = "";
 
-    let isValid = true;
+    let isValidParameter = true;
 
     if (name.value.trim() === "") {
         document.getElementById("nameValidation").textContent = "Error: Name is required!";
-        isValid = false;
+        isValidParameter = false;
     }
 
     if (date.value.trim() === "") {
         document.getElementById("dateValidation").textContent = "Error: Date is required!";
-        isValid = false;
+        isValidParameter = false;
     }
 
     if (email.value.trim() === "") {
         document.getElementById("emailValidation").textContent = "Error: Email is required!";
-        isValid = false;
+        isValidParameter = false;
     }
 
-    if (!isValid) {
+    if (!isValidParameter) {
         console.log("Incomplete form - submission halted");
         return false;
     }
