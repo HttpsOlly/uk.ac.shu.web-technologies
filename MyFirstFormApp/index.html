@@ -116,26 +116,26 @@
 
     <div></div>
     <h3>Tourism Interest Form</h3>
-    <!-- These inputs can have "required", however this renders the JS validateForm function useless-->
-    <form id="interestForm" action="" method="POST" onsubmit="return validateForm()">
+    <!-- These inputs can have "required", however this renders the JS validateForm function useless -->
+    <form id="tourism-form" action="tourism-results.html" method="GET" onsubmit="return validateForm(event)">
         <label for="name">Full Name: <span class="mandatory-field">*</span></label>
         <input type="text" id="name" name="name">
-        <div class="error" id="nameError"></div>
+        <div class="error" id="name-validation"></div>
 
         <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone">
 
         <label for="date">Rough Date of Interest: <span class="mandatory-field">*</span></label>
         <input type="date" id="date" name="date">
-        <div class="error" id="dateError"></div>
+        <div class="error" id="date-validation"></div>
 
         <label for="email">Email Address: <span class="mandatory-field">*</span></label>
         <input type="email" id="email" name="email">
-        <div class="error" id="emailError"></div>
+        <div class="error" id="email-validation"></div>
 
         <label for="comments">Additional Comments:</label>
-        <textarea id="comments" name="comments" rows="4"></textarea>
-        <div class="error" id="commentsError"></div>
+        <textarea id="comments" name="comments" rows="5"></textarea>
+        <div class="error" id="comments"></div>
 
         <button type="submit">Submit</button>
     </form>

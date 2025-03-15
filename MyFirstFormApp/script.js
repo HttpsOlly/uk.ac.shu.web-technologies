@@ -25,29 +25,20 @@ function validateForm() {
     
     submitButton.style = "";
     
-    document.getElementById("nameValidation").textContent = "";
-    document.getElementById("dateValidation").textContent = "";
-    document.getElementById("emailValidation").textContent = "";
+    document.getElementById("name-validation").textContent = "";
+    document.getElementById("date-validation").textContent = "";
+    document.getElementById("email-validation").textContent = "";
 
     let isValidParameter = true;
 
-    if (name.value.trim() === "") {
-        document.getElementById("nameValidation").textContent = "Error: Name is required!";
-        isValidParameter = false;
-    }
+    ["name", "date", "email"].forEach(id => {
+        const value = document.getElementById(id).value.trim();
+        if (value === "") {
+            document.getElementById(`${id}-validation`).textContent = `Error: The ${id} is a mandatory field!`;
+            isValidParameter = false;
+        }
+    });
 
-    if (date.value.trim() === "") {
-        document.getElementById("dateValidation").textContent = "Error: Date is required!";
-        isValidParameter = false;
-    }
+    return isValidParameter ? true : false;
 
-    if (email.value.trim() === "") {
-        document.getElementById("emailValidation").textContent = "Error: Email is required!";
-        isValidParameter = false;
-    }
-
-    if (!isValidParameter) {
-        console.log("Incomplete form - submission halted");
-        return false;
-    }
 }
