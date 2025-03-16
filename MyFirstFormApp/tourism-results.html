@@ -16,6 +16,7 @@
     <p><strong>Phone number:</strong> <span id="phone"></span></p>
     <p><strong>Date of Interest:</strong> <span id="date"></span></p>
     <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Interested in:</strong> <span id="interest"></span></p>
     <p><strong>Comments:</strong> <span id="comments"></span></p>
 
     <script>
@@ -30,6 +31,7 @@
         document.getElementById("phone").textContent = params.get("phone") || "Not Provided";
         document.getElementById("date").textContent = formatDate(params.get("date") || ""); 
         document.getElementById("email").textContent = params.get("email");
+        document.getElementById("interest").textContent = params.get("interest");
         document.getElementById("comments").textContent = params.get("comments") || "Not provided";
     </script>
 </body>

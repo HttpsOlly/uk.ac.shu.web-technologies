@@ -133,6 +133,19 @@
         <input type="email" id="email" name="email">
         <div class="error" id="email-validation"></div>
 
+        <label for="interest">Interest: <span class="mandatory-field">*</span></label>
+        <br>
+        <select name="interest" id="interest">
+            <optgroup label="Tours">
+                <option value="Lapland Tours">Lapland Tours</option>
+                <option value="City Sightseeing">City Sightseeing</option>
+            </optgroup>
+            <optgroup label="Lifestyle">
+                <option value="Culture">Culture</option>
+                <option value="Sport">Sport</option>
+            </optgroup>
+        </select>
+
         <label for="comments">Additional Comments:</label>
         <textarea id="comments" name="comments" rows="5"></textarea>
         <div class="error" id="comments"></div>
@@ -174,4 +187,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

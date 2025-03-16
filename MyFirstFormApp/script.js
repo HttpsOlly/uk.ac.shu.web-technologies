@@ -20,14 +20,10 @@ function validateForm() {
     const submitButton = document.querySelector("button");
     
     submitButton.style = "";
-    
-    document.getElementById("name-validation").textContent = "";
-    document.getElementById("date-validation").textContent = "";
-    document.getElementById("email-validation").textContent = "";
 
     let isValidParameter = true;
 
-    ["name", "date", "email"].forEach(id => {
+    ["name", "date", "email", "interest"].forEach(id => {
         const value = document.getElementById(id).value.trim();
         if (value === "") {
             document.getElementById(`${id}-validation`).textContent = `Error: The ${id} is a mandatory field!`;
