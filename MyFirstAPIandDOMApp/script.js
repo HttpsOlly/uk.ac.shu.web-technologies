@@ -52,3 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+document.getElementById("get-duck-button").addEventListener("click", async () => {
+    const imageContainer = document.getElementById("duck-image-container");
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+    const apiUrl = "https://random-d.uk/api/random";
+    const demoServer = "https://cors-anywhere.herokuapp.com/corsdemo";
+
+    try {
+        const response = await fetch(`${proxyUrl}${apiUrl}`);
+        const json = await response.json();
+        
+        const img = document.createElement("img");
+        img.src = json.url;
+        img.alt = "This is a random image of a duck";
+        img.style.maxWidth = "100%";
+        imageContainer.innerHTML = "";
+        imageContainer.appendChild(img);
+    } catch (error) {
+        console.error(`Error fetching API - Olly, reminder to self to go here ${demoServer} and request temporary access to demo server! \n Regardless:`, error);
+    }
+});

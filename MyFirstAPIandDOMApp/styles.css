@@ -175,7 +175,7 @@ select {
     margin: 2px 0 20px 0;
 }
 
-button {
+#submit-form {
     background-color: royalblue;
     color: white;
     width: 100%;
@@ -188,7 +188,7 @@ button {
     transition: all 0.3s ease-in-out;
 }
 
-button:hover {
+#submit-form:hover {
     transform: scale(1.05) rotate(2deg);
     text-transform: uppercase;
     background-color: green;
@@ -198,6 +198,31 @@ button:hover {
 
 .mandatory-field {
     color: crimson;
+}
+
+#duck-container {
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+#duck-container button {
+    cursor: pointer;
+    padding: 1em;
+    background-color: darkgreen;
+    color: whitesmoke;
+    font-size: 14px;
+    border-color: aliceblue;
+    border-radius: 0.5em;
+}
+
+#duck-container img {
+    margin-top: 2em;
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
 }
 
 @media only screen and (max-width: 600px) {
@@ -278,7 +303,7 @@ button:hover {
         padding: 10px;
     }
 
-    button {
+    #submit-form {
         font-size: 1.1rem;
         padding: 14px;
     }
