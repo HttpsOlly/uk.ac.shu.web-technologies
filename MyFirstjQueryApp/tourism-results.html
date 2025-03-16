@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="media/finland_flag.svg" type="image/x-icon">
+    <title>Form Data Response Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <h1>The Ficticious Finland Tourism Board - Form Data</h1>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Phone number:</strong> <span id="phone"></span></p>
+    <p><strong>Date of Interest:</strong> <span id="date"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Interested in:</strong> <span id="interest"></span></p>
+    <p><strong>Comments:</strong> <span id="comments"></span></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        function formatDate(date) {
+            const [year, month, day] = date.split("-");
+            return `${day}/${month}/${year}`;
+        }
+
+        $("#name").text(params.get("name"));
+        $("#phone").text(params.get("phone") || "Not Provided");
+        $("#date").text(formatDate(params.get("date") || "")); 
+        $("#email").text(params.get("email"));
+        $("#interest").text(params.get("interest"));
+        $("#comments").text(params.get("comments") || "Not Provided");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Finland</title>
+    <link rel="icon" href="media/finland_flag.svg" type="image/x-icon">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+    <div class="nav-header">
+        <div class="heading">
+            <h1>The Republic of Finland</h1>
+            <img id="flag" src="media/finland_flag.svg" width="100px" height="50px" alt="Finland Flag"
+                title="Flag of Finland">
+        </div>
+        <div class="burger-icon" onclick="toggleBurgerIcon()">
+            <span>&#9776;</span>
+        </div>
+    </div>
+    <div class="nav" id="navigation-bar">
+        <a href="#geography">Geography 🗺️</a>
+        <a href="#economy">Economy 💰</a>
+        <a href="#culture">Culture and Sport 🏒</a>
+        <a href="#sauna">Sauna ♨️</a>
+    </div>
+    <div id="main-content">
+        <div class="article">
+            <div class="text-container">
+                <h2 title="Geography of Finland" style="color:#008000; text-align: justify;">Geography</h2>
+                <p>
+                    Finland is a Nordic country situated in North-Eastern Europe, possessing land borders with Sweden,
+                    Norway
+                    and Russia. It has a population of 5.6 million people, of which 650,000 people live in the capital
+                    Helsinki.
+                </p>
+                <p>
+                    Comprising predominantly of forests at nearly 75% of the land being covered with trees, Finland is
+                    one of the
+                    world's most forest covered countries, and Europe's most forest covered.
+                    Winters tend to be very harsh with the entirety of the country experiencing an average daily
+                    temperature of 0°C,
+                    with winters lasting for over 100 days. <br>
+
+                    Learn more about Finland's geography from National Geographic <a
+                        href="https://kids.nationalgeographic.com/geography/countries/article/finland">here</a>.
+                </p>
+                <hr>
+            </div>
+            <div class="photo-container">
+                <div class="img-holder"><img src="media/kittila_slope.avif" alt="kittila slope" title="kittila slope">
+                </div>
+                <div class="img-holder"><img src="media/finland_map.jpg" alt="Map of Finland" title="Map of Finland">
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="photo-container">
+                <div class="img-holder"><img src="media/finland_parliament.jpg" alt="Parliament Building"
+                        title="Parliament Building"></div>
+                <div class="img-holder"><img src="media/helsinki_photo.jpg" alt="Helsinki photo" title="Helsinki Photo">
+                </div>
+            </div>
+            <div class="text-container">
+                <h2 title="Economy of Finland" style="color:#2f3be0;">Economy</h2>
+                <p>
+                    Ranking 16th in the world in terms of GDP Per Capita, Finland is one of the world's weathier
+                    nations.
+                    They rank 7th in the Global Development Index. Helsinki alone represents one third of all GDP.
+                </p>
+                <p>
+                    The Kittilä Gold Mine is the north of Finland is Europe's largest producer of gold.
+                    They mainly export to fellow European parters like Germany, Sweden and The Netherlands, and import
+                    from Germany, Sweden and Russia.
+
+                    Finland's main imports are petroleum and steel, whereas the main exports are electrical and optical
+                    equipment. <br>
+                    For more information on Finland's economy, visit Finnish news outlet YLE's economy articles <a
+                        href="https://yle.fi/t/18-204933/en">here</a>.
+                </p>
+                <hr>
+            </div>
+        </div>
+        <div class="article">
+            <div class="text-container">
+                <h2 title="Culture of Finland" style="color:#1b94a1;">Culture and Sport</h2>
+                <p>
+                    With national languages including Finnish, Swedish and Sami, Finland boasts a wide range of Nordic
+                    diversity. Their love for sauna is of huge tradition and importance, with approximately 3.2 million
+                    saunas nationally.
+                </p>
+                <p>
+                    Sport is enjoyed across Finland, with sports such as football, ice hockey and pesäpallo the most
+                    followed, and the latter being the national sport. Famous sportspeople include:
+                </p>
+                <ul style="width: 90%">
+                    <li>Kimi Räikkönen</li>
+                    <li>Jari Litmanen</li>
+                    <li>Lasse Nurmi</li>
+                    <li>Teemu Pukki</li>
+                    <li>Kaisa Mäkäräinen</li>
+                </ul>
+                <hr>
+            </div>
+            <!-- <div class="photo-container">
+                    <div><img src="media/finland_ice_hockey.avif" alt="Ice Hockey in Finland"
+                        title="Finland Celebrate Ice Hockey Goal"></div> -->
+        </div>
+    </div>
+
+    <div></div>
+    <h3>Tourism Interest Form</h3>
+    <!-- These inputs can have "required", however this renders the JS validateForm function useless -->
+    <form id="tourism-form" action="tourism-results.html" method="GET" onsubmit="return validateForm(event)">
+        <label for="name">Full Name: <span class="mandatory-field">*</span></label>
+        <input type="text" id="name" name="name">
+        <div class="error" id="name-validation"></div>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="date">Rough Date of Interest: <span class="mandatory-field">*</span></label>
+        <input type="date" id="date" name="date">
+        <div class="error" id="date-validation"></div>
+
+        <label for="email">Email Address: <span class="mandatory-field">*</span></label>
+        <input type="email" id="email" name="email">
+        <div class="error" id="email-validation"></div>
+
+        <label for="interest">Interest: <span class="mandatory-field">*</span></label>
+        <br>
+        <select name="interest" id="interest">
+            <optgroup label="Tours">
+                <option value="Lapland Tours">Lapland Tours</option>
+                <option value="City Sightseeing">City Sightseeing</option>
+            </optgroup>
+            <optgroup label="Lifestyle">
+                <option value="Culture">Culture</option>
+                <option value="Sport">Sport</option>
+            </optgroup>
+        </select>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="5"></textarea>
+        <div class="error" id="comments"></div>
+
+        <button id="submit-form" type="submit">Submit</button>
+    </form>
+    <hr>
+    <hr>
+    <div id="duck-container" >
+        <button id="get-duck-button">Click here to see a duck 🦆</button>
+        <div id="duck-image-container"></div>
+    </div> 
+    <hr>
+    <hr>
+    <h2><b><u>References</u></b></h2>
+    <ul class="Reference-list">
+        <li class="reference">Crystal Ski Holidays (n.d.). <i>Finland (Lapland) Ski Holidays.</i> Crystal Ski
+            Holidays.
+            <a
+                href="https://www.crystalski.co.uk/ski-resorts/finland-lapland-ski-holidays">https://www.crystalski.co.uk/ski-resorts/finland-lapland-ski-holidays</a>
+        </li>
+        <li class="reference">Koppehel, S. (n.d.). <i>SVG vectorization of the Flag of Finland.</i> Wikipedia.
+            <a href="https://en.wikipedia.org/wiki/Finland">https://en.wikipedia.org/wiki/Finland</a>
+        </li>
+        <!-- <li class="reference">Lehtikuva (n.d.), as cited in Browne, R. (2022). <i>Finland wins hockey world title on
+                    home ice.</i> YLE.
+                <a href="https://yle.fi/a/3-12465770">https://yle.fi/a/3-12465770</a>
+            </li> -->
+        <li class="reference">Open Access Government (2017). <i>The outlook of the Finnish economy.</i> Open Access
+            Government.
+            <a
+                href="https://www.openaccessgovernment.org/outlook-finnish-economy/40324">https://www.openaccessgovernment.org/outlook-finnish-economy/40324</a>
+        </li>
+        <li class="reference">RailPass (n.d.). <i>Map of Finland.</i> RailPass.
+            <a
+                href="https://www.railpass.com/plan-your-trip/maps/finland">https://www.railpass.com/plan-your-trip/maps/finland</a>
+        </li>
+        <li class="reference">Viator (n.d.). <i>Parliament House of Finland (Eduskuntatalo) Tours and Tickets.</i>
+            Viator.
+            <a
+                href="https://www.viator.com/en-GB/Helsinki-attractions/Parliament-House-of-Finland-Eduskuntatalo/d803-a18722">https://www.viator.com/en-GB/Helsinki-attractions/Parliament-House-of-Finland-Eduskuntatalo/d803-a18722</a>
+        </li>
+    </ul>
+    <hr>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
