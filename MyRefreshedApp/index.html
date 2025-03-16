@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Finland Tourism Board</title>
+    <link rel="icon" href="media/finland_flag.svg" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container-lg pt-5">
+        <div class="border-bottom title-container">
+            <h1>Finland Tourism Board 🇫🇮</h1>
+        </div>
+        <div class="container pt-3">
+            <div class="row">
+                <div class="col-md-4 p-3 bg-whitesmoke text-black">
+                    <h3 class="text-center">Geography</h3>
+                    <div>
+                        <p>
+                            Finland is a Nordic country situated in North-Eastern Europe, possessing land borders with
+                            Sweden, Norway and Russia. It has a population of 5.6 million people, of which 650,000
+                            people
+                            live in the capital Helsinki.
+                        </p>
+                        <p>
+                            Comprising predominantly of forests at nearly 75% of the land being covered with trees,
+                            Finland
+                            is one of the world's most forest covered countries, and Europe's most forest covered.
+                            Winters
+                            tend to be very harsh with the entirety of the country experiencing an average daily
+                            temperature
+                            of 0°C, with winters lasting for over 100 days.
+                        </p>
+                        <p>Learn more about Finland's geography from National Geographic <a
+                                href="https://kids.nationalgeographic.com/geography/countries/article/finland">here</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 p-3 bg-whitesmoke text-black">
+                    <h3 class="text-center">Economy</h3>
+                    <div>
+                        <p>
+                            Ranking 16th in the world in terms of GDP Per Capita, Finland is one of the world's weathier
+                            nations. They rank 7th in the Global Development Index. Helsinki alone represents one third
+                            of
+                            all GDP.
+                        </p>
+                        <p>
+                            The Kittilä Gold Mine is the north of Finland is Europe's largest producer of gold.
+                            They mainly export to fellow European parters like Germany, Sweden and The Netherlands, and
+                            import from Germany, Sweden and Russia.
+                        </p>
+
+                        <p>
+                            Finland's main imports are petroleum and steel, whereas the main exports are electrical and
+                            optical
+                            equipment.
+                        </p>
+                        <p>
+                            For more information on Finland's economy, visit Finnish news outlet YLE's economy articles
+                            <a href="https://yle.fi/t/18-204933/en">here</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 p-3 bg-whitesmoke text-black">
+                    <h3 class="text-center">Culture</h3>
+                    <div>
+                        <p>
+                            With national languages including Finnish, Swedish and Sami, Finland boasts a wide range of
+                            Nordic
+                            diversity. Their love for sauna is of huge tradition and importance, with approximately 3.2
+                            million
+                            saunas nationally.
+                        </p>
+                        <p>
+                            Sport is enjoyed across Finland, with sports such as football, ice hockey and pesäpallo the
+                            most
+                            followed, and the latter being the national sport. Famous sportspeople include:
+                        </p>
+                        <ul>
+                            <li>Kimi Räikkönen</li>
+                            <li>Jari Litmanen</li>
+                            <li>Lasse Nurmi</li>
+                            <li>Teemu Pukki</li>
+                            <li>Kaisa Mäkäräinen</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+        <div class="col-md-7 p-4 bg-whitesmoke rounded shadow">
+            <h3 class="text-center">Tourism Interest Form</h3>
+
+            <form id="tourism-form" action="tourism-results.html" method="GET" onsubmit="return validateForm(event)">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name: <span class="mandatory-field">*</span></label>
+                    <input type="text" id="name" name="name" class="form-control">
+                    <div class="error" id="name-validation"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Rough Date of Interest: <span
+                            class="mandatory-field">*</span></label>
+                    <input type="date" id="date" name="date" class="form-control">
+                    <div class="error" id="date-validation"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address: <span class="mandatory-field">*</span></label>
+                    <input type="email" id="email" name="email" class="form-control">
+                    <div class="error" id="email-validation"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="interest" class="form-label">Interest: <span class="mandatory-field">*</span></label>
+                    <select name="interest" id="interest" class="form-select">
+                        <optgroup label="Tours">
+                            <option value="Lapland Tours">Lapland Tours</option>
+                            <option value="City Sightseeing">City Sightseeing</option>
+                        </optgroup>
+                        <optgroup label="Lifestyle">
+                            <option value="Culture">Culture</option>
+                            <option value="Sport">Sport</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="comments" class="form-label">Additional Comments:</label>
+                    <textarea id="comments" name="comments" rows="5" class="form-control"></textarea>
+                    <div class="error" id="comments-validation"></div>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div id="main-content" class="container full-height">
+        <div class="duck-container col-md-6">
+            <h3 class="mb-4">Duck API</h3>
+            <button id="get-duck-button" class="btn btn-success mb-4">Click here to see a duck 🦆</button>
+            <div id="duck-image-container"></div>
+        </div>
+    </div>
+</html>

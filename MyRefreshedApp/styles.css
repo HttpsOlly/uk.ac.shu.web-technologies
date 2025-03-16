@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    background-color: #fcfcfc;
+}
+
+.bg-whitesmoke {
+    background-color: whitesmoke;
+}
+
+a {
+    color: #008188;
+}
+
+.title-container {
+    position: relative;
+    background-image:
+    linear-gradient(to bottom left, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0,1) 100%),
+    url('media/kittila_slope.avif');
+    background-position: center;
+    background-size: cover;
+    padding: 115px 0;
+    text-align: left;
+    color: white;
+}
+
+.title-container h1 {
+    font-size: 3.5rem;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    margin: 0;
+}
+
+.error {
+    color: crimson;
+    font-size: 0.95rem;
+    margin: 2px 0 20px 0;
+}
+
+.mandatory-field {
+    color: crimson;
+}
