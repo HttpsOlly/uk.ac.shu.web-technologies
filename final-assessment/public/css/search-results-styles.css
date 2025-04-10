@@ -1,0 +1,251 @@
+body, html {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    background-color: #fcfcfc;
+}
+
+.event-container {
+    border: 1px solid lightgray;
+    padding: 16px;
+    border-radius: 6px;
+    margin: 16px;
+}
+
+#map {
+    float: right;
+    width: 30%;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: none;
+}
+
+header {
+    background-color: #141414;
+    padding: 10px 20px;
+    box-shadow: 0px 5px 5px #CDBA7B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 80px;
+    height: auto;
+}
+
+.white-icon {
+    color: whitesmoke;
+    transition: color 0.3s ease-in-out;
+    margin-right: 20px;
+    font-size: 2rem;
+}
+
+.white-icon:hover {
+    color: #CDBA7B;
+}
+
+.title-container {
+    position: relative;
+    color: whitesmoke;
+    height: 250px;
+}
+
+.background-image-container {
+    height: 100%;
+    width: 100%;
+}
+
+.background-image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom left, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotateY(180deg);
+}
+
+.title-container h1 {
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+
+.mandatory-field {
+    color: crimson;
+}
+
+footer {
+    background-color: rgb(114, 201, 99);
+    padding: 10px;
+
+}
+
+.unit {
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .rounded {
+        padding: 40px;
+    }
+
+    .form-control, .form-select {
+        font-size: 1rem;
+    }
+    
+    .col-md-6 .row {
+        flex-wrap: wrap;
+    }
+    
+    .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .unit {
+        margin-top: 20px;
+    }
+    
+    #logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .white-icon {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .unit {
+        margin-top: 0;
+    }
+
+    #logo {
+        width: 150px;
+        height: auto;
+    }
+
+    .white-icon {
+        font-size: 3rem;
+    }
+}
+
+
+@media (min-width: 1180px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-container {
+        background-size: 100% 100%;
+        height: 300px;
+        background-color: black;
+    }
+}
+
+@media (min-width: 768px) {
+    #map {
+        display: block;
+    }
+}
+
+.display-genre {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+#filters {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-size: 1rem;
+}
+
+.form-control {
+    width: 120px;
+}
+
+#apply-filter {
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.d-flex {
+    gap: 20px;
+}
+
+.event-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.event-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+}
+
+.action-button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    background-color: royalblue;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+    .event-image-container {
+        position: relative;
+    }
+
+    .action-button {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+.error {
+    color: crimson;
+    font-size: 0.95rem;
+    margin: 2px 0 20px 0;
+}
