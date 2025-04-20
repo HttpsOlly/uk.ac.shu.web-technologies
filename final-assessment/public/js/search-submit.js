@@ -1,4 +1,3 @@
-
 import { setCookie, getCookie, deleteCookie } from "./cookie-helper.js";
 
 $(document).ready(function () {
