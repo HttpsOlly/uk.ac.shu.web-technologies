@@ -11,7 +11,7 @@ async function searchSubmitHandler(event) {
     const latitude = $("#latitude").val().trim();
     const longitude = $("#longitude").val().trim();
     const radius = $("#radius").val().trim();
-    const unit = $("#unit").val().trim();
+    const unit = $("#unit").val();
     const startDate = $("#start-date").val().trim();
     const endDate = $("#end-date").val().trim();
 
