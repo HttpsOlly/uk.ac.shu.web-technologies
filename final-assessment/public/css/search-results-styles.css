@@ -34,14 +34,18 @@ header {
     height: auto;
 }
 
-.white-icon {
+.home-icon {
     color: whitesmoke;
     transition: color 0.3s ease-in-out;
     margin-right: 20px;
     font-size: 2rem;
 }
 
-.white-icon:hover {
+.home-icon:hover {
+    color: #CDBA7B;
+}
+
+.home-icon:focus {
     color: #CDBA7B;
 }
 
