@@ -26,7 +26,7 @@
     </div>
     <div>
       <a href="index.html" aria-label="Home">
-        <i class="bi bi-house-fill home-icon" tabindex="1"></i>
+        <i class="bi bi-house-fill home-icon" tabindex="0"></i>
       </a>
     </div>
   </header>
@@ -49,7 +49,7 @@
           <form id="search" action="search-results.html" class="row g-4">
             <div class="col-12">
               <label for="location" class="form-label">Location: <span class="mandatory-field">*</span></label>
-              <input type="text" id="location" name="location" class="form-control w-100" tabindex="2">
+              <input type="text" id="location" name="location" class="form-control w-100" tabindex="0">
               <span class="error" id="location-validation"></span>
               <input type="hidden" id="latitude" name="latitude" value="">
               <input type="hidden" id="longitude" name="longitude" value="">
@@ -57,12 +57,12 @@
             <div class="col-12 d-flex">
               <div class="me-3" style="flex: 0.5;">
                 <label for="radius" class="form-label">Radius: <span class="mandatory-field">*</span></label>
-                <input type="number" id="radius" name="radius" value="50" class="form-control" tabindex="3">
+                <input type="number" id="radius" name="radius" value="50" class="form-control" tabindex="0">
                 <span class="error" id="radius-validation"></span>
               </div>
               <div style="flex: 2.5;">
                 <label for="unit" class="form-label">Unit: <span class="mandatory-field">*</span></label>
-                <select name="unit" id="unit" class="form-select" tabindex="4">
+                <select name="unit" id="unit" class="form-select" tabindex="0">
                   <option value="" disabled selected hidden>Choose unit</option>
                   <option value="miles">Miles</option>
                   <option value="km">Kilometres</option>
@@ -72,12 +72,12 @@
             </div>
             <div class="col-12">
               <label for="start-date" class="form-label">Start Date: <span class="mandatory-field">*</span></label>
-              <input type="date" id="start-date" name="start-date" class="form-control w-100" tabindex="5">
+              <input type="date" id="start-date" name="start-date" class="form-control w-100" tabindex="0">
               <span class="error" id="start-date-validation"></span>
             </div>
             <div class="col-12">
               <label for="end-date" class="form-label">End Date: <span class="mandatory-field">*</span></label>
-              <input type="date" id="end-date" name="end-date" class="form-control w-100" tabindex="6">
+              <input type="date" id="end-date" name="end-date" class="form-control w-100" tabindex="0">
               <span class="error" id="end-date-validation"></span>
               <input type="hidden" id="start-date-time" name="start-date-time" value="">
               <input type="hidden" id="end-date-time" name="end-date-time" value="">
