@@ -86,17 +86,11 @@ function handleData(data) {
 
 function initializeMap(lat, lon, radius, unit) {
 
-    let radiusInMetres; // The API prodives this in metres by default
-
     const miles_convert = 1609.32;
     const km_convert = 1000;
-
-    if (unit === "miles") {
-        radiusInMetres = radius * miles_convert;
-    } else if (unit === "kilometres") {
-        radiusInMetres = radius * km_convert;
-    }
-
+    
+    const radiusInMetres = (unit === "miles") ? radius * miles_convert : radius * km_convert;
+    
     const map = leaflet.map("map").setView([lat, lon], 40);
 
     leaflet.tileLayer(`https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`, {
