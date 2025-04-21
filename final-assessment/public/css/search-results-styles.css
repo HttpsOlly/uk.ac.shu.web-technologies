@@ -26,6 +26,11 @@ body, html {
     border-color: royalblue;
 }
 
+.leaflet-control-attribution a {
+    padding: 12px;
+    display: inline-block;
+}
+
 header {
     background-color: #141414;
     padding: 10px 20px;
