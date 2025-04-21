@@ -216,13 +216,13 @@ function generateEventPrice(prices) {
 
     if (!prices || prices.length === 0) {
         const fallback = formatPrice(randomPrice());
-        return $("<p>").text(`Est. Price: £${fallback}`);
+        return $("<p>").text(`Estimated Price: £${fallback}`);
     }
 
     const standardPrice = prices.find(price => price.type === "standard");
     if (!standardPrice) {
         const fallback = formatPrice(randomPrice());
-        return $("<p>").text(`Est. Price: £${fallback}`);
+        return $("<p>").text(`Estimated Price: £${fallback}`);
     }
 
     let { min, max } = standardPrice;
@@ -237,7 +237,7 @@ function generateEventPrice(prices) {
     if (max > 0) return $("<p>").text(`Price: £${formatPrice(max)}`);
 
     const fallback = formatPrice(randomPrice());
-    return $("<p>").text(`Est. Price: £${fallback}`);
+    return $("<p>").text(`Estimated Price: £${fallback}`);
 }
 
 function generateActionButton(url, prices) {
