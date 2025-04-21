@@ -72,7 +72,8 @@ function handleData(data) {
         event.name = replaceCharacters(event.name);
 
         if (!event.priceRanges || !Array.isArray(event.priceRanges)) {
-            event.price = (Math.random() * (99.99 - 10) + 10).toFixed(2);
+            const generatedPrice = (Math.random() * (99.99 - 10) + 10).toFixed(2);
+            event.priceRanges = [{type: "standard", min: generatedPrice, max: generatedPrice}];
         }
 
         return event;
