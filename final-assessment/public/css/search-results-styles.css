@@ -21,12 +21,13 @@ body, html {
 }
 
 button.toggle {
-    border-color: royalblue;
+    border-color: #0c68f0;
+    color: #0c68f0;
 }
 
 button.toggle:hover, button.toggle:focus {
     color: white;
-    border-color: royalblue;
+    border-color: #0c68f0;
 }
 
 .leaflet-control-attribution a {
@@ -237,7 +238,7 @@ footer {
     text-decoration: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
-    background-color: royalblue;
+    background-color: #0c68f0;
     color: whitesmoke;
     margin-top: 10px;
 }
