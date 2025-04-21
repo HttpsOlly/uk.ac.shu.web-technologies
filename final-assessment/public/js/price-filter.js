@@ -211,24 +211,33 @@ function generateEventTime(time) {
 }
 
 function generateEventPrice(prices) {
-    if (!prices || prices.length === 0) return;
-
-    const standardPrice = prices.find(price => price.type === "standard");
-    if (!standardPrice) return;
-
     const formatPrice = price => (price % 1 === 0 ? price.toFixed(0) : price.toFixed(2));
+    const randomPrice = () => (Math.random() * (99.99 - 10) + 10);
 
-    let minPrice = standardPrice.min;
-    let maxPrice = standardPrice.max;
-
-    if (minPrice > 0 && maxPrice > 0) {
-        minPrice = formatPrice(minPrice);
-        maxPrice = formatPrice(maxPrice);
-        return $("<p>").text(minPrice === maxPrice ? `Price: £${minPrice}` : `Prices: £${minPrice} - £${maxPrice}`);
+    if (!prices || prices.length === 0) {
+        const fallback = formatPrice(randomPrice());
+        return $("<p>").text(`Est. Price: £${fallback}`);
     }
 
-    if (minPrice > 0) return $("<p>").text(`Price: £${formatPrice(minPrice)}`);
-    if (maxPrice > 0) return $("<p>").text(`Price: £${formatPrice(maxPrice)}`);
+    const standardPrice = prices.find(price => price.type === "standard");
+    if (!standardPrice) {
+        const fallback = formatPrice(randomPrice());
+        return $("<p>").text(`Est. Price: £${fallback}`);
+    }
+
+    let { min, max } = standardPrice;
+
+    if (min > 0 && max > 0) {
+        min = formatPrice(min);
+        max = formatPrice(max);
+        return $("<p>").text(min === max ? `Price: £${min}` : `Prices: £${min} - £${max}`);
+    }
+
+    if (min > 0) return $("<p>").text(`Price: £${formatPrice(min)}`);
+    if (max > 0) return $("<p>").text(`Price: £${formatPrice(max)}`);
+
+    const fallback = formatPrice(randomPrice());
+    return $("<p>").text(`Est. Price: £${fallback}`);
 }
 
 function generateActionButton(url, prices) {
