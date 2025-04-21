@@ -71,7 +71,7 @@ function handleData(data) {
     const events = data._embedded?.events.map(event => {
         event.name = replaceCharacters(event.name);
 
-        if (!event.priceRanges) {
+        if (!event.priceRanges || !Array.isArray(event.priceRanges)) {
             event.price = (Math.random() * (99.99 - 10) + 10).toFixed(2);
         }
 
