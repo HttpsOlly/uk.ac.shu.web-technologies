@@ -217,7 +217,7 @@ function generateEventPrice(prices) {
     if (!standardPrice) return;
 
     const formatPrice = price => (price % 1 === 0 ? price.toFixed(0) : price.toFixed(2));
-
+    console.log(standardPrice);
     let minPrice = standardPrice.min;
     let maxPrice = standardPrice.max;
 
